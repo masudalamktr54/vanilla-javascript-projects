@@ -1,0 +1,139 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.hamburger{
+	display: flex;
+	justify-content:end;
+	width: 100vw;
+}
+
+.masud{
+	font-size: 40px;
+	top: 3%;
+	right: 8%;
+	font-weight: 600;
+	position: absolute;
+	background-image: url(https://images.pexels.com/photos/5834059/pexels-photo-5834059.jpeg?auto=compress&cs=tinysrgb&w=400);
+	background-size: cover;
+	background-position: center;
+	background-clip: text;
+	color: transparent;
+}
+
+.masud:hover{
+	font-size: 50px;
+	transition: all ease-in-out 1s;
+	/* transition: all ease-out 1s; */
+}
+
+.masud:hover::after{
+	transition: all ease 1s;
+}
+
+/* .masud::after{
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 8px;
+	width: 0%;
+	background-image: url(https://images.pexels.com/photos/5834059/pexels-photo-5834059.jpeg?auto=compress&cs=tinysrgb&w=400);
+	transition:all ease 1s;
+}
+
+.masud:hover::after{
+	width: 100%;
+} */
+
+
+
+
+
+.sidebar{
+	/* width: 40%;
+	height: 100vh;
+	background-color: blueviolet;
+	transition: all ease 0.3s;
+	transform: translate(-650px, 0px);
+	position: absolute;
+	transition: all ease-in-out 1s; */
+
+	position: fixed;
+    top: 0;
+    left: -2500px;
+    width: 250px;
+    height: 100%;
+	background-color: #333;
+    padding-top: 20px;
+    color: #fff;
+    transition: left 0.3s ease;
+}
+
+/* .sidebarGo{
+	transform: translate(-650px, 0px);
+	position: absolute;
+	transition: all ease-in-out 1s;
+} */
+
+.heading{
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 10px;
+	
+}
+
+.coding{
+	letter-spacing: 3px;
+}
+
+.coding span{
+	color: rgb(147, 45, 45);
+}
+
+.cross{
+	color: rgb(123, 29, 29);
+}
+
+.containt{
+	margin-left: 10px;
+	list-style-type: none;
+}
+
+#m1{
+	padding: 10px 0 10px 0;
+	font-size: 22px;
+	font-weight: 600;
+}
+
+#m2{
+	padding: 10px 0 10px 0;
+	font-size: 22px;
+	font-weight: 600;
+}
+
+#m3{
+	padding: 10px 0 10px 0;
+	font-size: 22px;
+	font-weight: 600;
+}
+
+#m4{
+	padding: 10px 0 10px 0;
+	font-size: 22px;
+	font-weight: 600;
+}
+
+.social ul{
+	margin-top: 20px;
+	list-style-type: none;
+	display: flex;
+	justify-content: center;
+	align-items: end;
+}
+
+.social ul li{
+	margin-left: 15px;
+    font-size: 25px;
+}

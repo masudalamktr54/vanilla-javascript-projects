@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Counter project in js</title>
+</head>
+<style>
+	.mainDiv{
+		display: flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content: center;
+		height: 100vh;
+	}
+
+	.btn{
+		padding: 10px 12px;
+		font-size: larger;
+		font-weight: 600;
+	}
+
+	.Counter{
+		color: #fff;
+		font-size: 50px;
+	}
+
+	#count{
+		color: #bb2;
+		font-size: 60px;
+	}
+</style>
+
+<body style="background-color: #212121;">
+
+	<div class="mainDiv">
+	<h1 class="Counter">Counter</h1>
+
+		<h1 id="count">0</h1>
+	
+	<div>
+		<button class="btn" id="1">DECREASE</button>
+		<button class="btn" id="2">RESET</button>
+		<button class="btn" id="3">INCREASE</button>
+	</div>
+	</div>
+</body>
+
+    <script>
+		let num = 0
+		function increase() {
+			return (num = num + 1)
+		}
+
+		function reset() {
+			return (num = 0)
+		}
+
+		function decrease() {
+			return (num = num - 1)
+		}
+
+		const dec = document.getElementById("1")
+		dec.addEventListener("click", function (e) {
+			const d = document.getElementById("count")
+			d.innerHTML = decrease()
+			if (num <= -1) {
+				d.style.color = "red"
+			} else if(num == 0) {
+				d.style.color = "#bb2"
+			}
+		})
+
+
+		const res = document.getElementById("2")
+		res.addEventListener("click", (e) => {
+			const r = document.getElementById("count")
+			r.innerHTML = reset()
+			r.style.color = "#bb2"
+		})
+
+		
+		const inc = document.getElementById("3")
+		inc.addEventListener("click", function (e) {
+			const i = document.getElementById("count")
+			i.innerHTML = increase()
+			if (num >= 1) {
+				i.style.color = "green"
+			} else if(num == 0) {
+				i.style.color = "#bb2"
+			}
+		})
+
+		
+		</script>
+
+</html>

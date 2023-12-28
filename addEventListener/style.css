@@ -1,0 +1,30 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.container{
+	width: 100vw;
+	display: flex;
+}
+
+.hamburger{
+	display: inline;
+	padding: 4px;
+	/* height: 16px; */
+	background-color: red;
+}
+
+.sidebar{
+	width: 40%;
+	height: 100vh;
+	background-color: blueviolet;
+	transition: all ease 0.3s;
+	
+}
+
+.sidebarGo{
+	transform: translate(-650px);
+	transition: all ease-in-out 1s;
+	position: absolute;
+}
