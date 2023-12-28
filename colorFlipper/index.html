@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Color Flipper</title>
+</head>
+<body id="body">
+	<style>
+		#body{
+			background-color: #212121;
+		}
+		#button {
+			padding: 20px 36px;
+			font-size: 30px;
+			font-weight: 600;
+			background-color: blue;
+			border: 1px solid black;
+			border-radius: 2px;
+		}
+
+		#button:hover {
+			border-radius: 8px;
+		}
+
+		div{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+		}
+	</style>
+
+	<div>
+		<button id="button">CLICK ME</button>
+	</div>
+
+</body>
+
+<script>
+	function colorFlipper() {
+	let hash = "#"
+	let number = "0123456789"
+	let alpha = number  += "ABCDEF"
+	for (let i = 1; i <= 6; i++) {
+		hash = hash + alpha[Math.floor(Math.random() * 16 + 1)]
+    }
+	return hash
+	}
+	
+	let doc = document.querySelector("#button")
+
+	let m = doc.addEventListener("click", randomColor)
+	console.log(m)
+
+	function randomColor() {
+		document.body.style.backgroundColor = colorFlipper()
+	}
+</script>
+</html>
